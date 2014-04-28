@@ -15,13 +15,17 @@ extern "C" {
 #endif
 
 #include <errno.h>
+#include <stdlib.h>
 #include <wchar.h>
 
 #include <support/android/nl_types.h>
 
 static void unimplemented_stub(const char* function) {
-    const char* fmt = "%s(3) is not implemented on Android\n";
+    const char* fmt = "%s(3) is stubbed out in libcxx\n";
     fprintf(stderr, fmt, function);
+#if 0 // Enable if you're trying to find out who's calling...
+    abort();
+#endif
 }
 
 #define UNIMPLEMENTED unimplemented_stub(__PRETTY_FUNCTION__)
