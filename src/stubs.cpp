@@ -36,12 +36,6 @@ float wcstof(const wchar_t *, wchar_t **)
     return 0;
 }
 
-double wcstod(const wchar_t *, wchar_t **)
-{
-    UNIMPLEMENTED;
-    return 0;
-}
-
 long double wcstold(const wchar_t *, wchar_t **)
 {
     UNIMPLEMENTED;
